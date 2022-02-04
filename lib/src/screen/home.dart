@@ -10,13 +10,16 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Device Setting'),
       ),
-      body:  Center(
-        child: InkWell(child: const Text("Open Device Setting"),
-        onTap: (){
-          if (kDebugMode) {
-            print("Opening Device Setting");
-
-          }},
+      body: Center(
+        child: InkWell(
+          child: const Text("Open Device Setting"),
+          onTap: () {
+            if (kDebugMode) {
+              print("Opening Device Setting");
+            }else{
+              debugPrint('Production');
+            }
+          },
         ),
       ),
     );
