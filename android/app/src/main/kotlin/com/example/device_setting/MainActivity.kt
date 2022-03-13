@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.plugins.util.GeneratedPluginRegister
 import io.flutter.plugin.common.MethodChannel
 import java.lang.Error
 
@@ -14,6 +15,7 @@ class MainActivity: FlutterActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        GeneratedPluginRegister.registerGeneratedPlugins(flutterEngine)
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             channel
