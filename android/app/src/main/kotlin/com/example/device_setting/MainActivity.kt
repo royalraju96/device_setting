@@ -13,7 +13,7 @@ class MainActivity: FlutterActivity() {
     private val channel: String = "com.device_setting/open_setting"
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
-    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+   override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         GeneratedPluginRegister.registerGeneratedPlugins(flutterEngine)
         MethodChannel(
@@ -76,7 +76,7 @@ class MainActivity: FlutterActivity() {
     }
 }
 
-class RequestName {
+private class RequestName {
     val openNetworkSetting: String = "open_network_setting"
     val openLocationSetting: String = "open_location_setting"
     val serviceName: String = "open_device_setting"
