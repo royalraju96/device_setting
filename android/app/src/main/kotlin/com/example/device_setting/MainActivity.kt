@@ -56,7 +56,7 @@ class MainActivity: FlutterActivity() {
                 startActivity(Intent(android.provider.Settings.ACTION_HOME_SETTINGS))
             }
             requestType.openPasswordSetting -> {
-                startActivity(Intent(android.provider.Settings.ACTION_SECURITY_SETTINGS))
+                startActivity(Intent(android.provider.Settings.ACTION_FINGERPRINT_ENROLL))
             }
             requestType.openHotspotSetting -> {
                 val tetherSettings = Intent().apply {
